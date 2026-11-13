@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090912">
+<title>DJ Operator | Feel the Beat</title>
+<style>
+:root{--bg:#090912;--panel:#141421;--muted:#aaa9bb;--white:#f7f6ff;--pink:#ff3d9a;--cyan:#43e7ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
+header{position:sticky;top:0;z-index:5;background:#090912eF;border-bottom:1px solid #ffffff16;backdrop-filter:blur(12px)}
+nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:2px;font-size:1.15rem}.logo span{color:var(--pink)}
+.links{display:flex;gap:26px;color:#d5d3e2;font-size:.92rem}.links a:hover{color:var(--cyan)}
+.menu{display:none;background:none;color:white;border:1px solid #ffffff35;border-radius:8px;padding:8px 12px}
+.hero{min-height:650px;display:grid;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 40%,#5a155a77,transparent 38%),radial-gradient(ellipse at 15% 80%,#123f6377,transparent 35%)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#090912 0%,#090912dd 48%,#09091255 100%);pointer-events:none}
+.hero-inner{position:relative;z-index:1;padding:95px 0;max-width:720px}.eyebrow{color:var(--cyan);font-weight:700;letter-spacing:4px;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(3rem,8vw,6.4rem);line-height:.98;margin:20px 0;font-weight:950;letter-spacing:-3px}h1 span{color:var(--pink);text-shadow:0 0 35px #ff3d9a55}
+.hero p{color:#c6c3d4;max-width:560px;font-size:1.1rem}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 23px;border-radius:30px;font-weight:800;background:linear-gradient(100deg,var(--pink),#a94dff);box-shadow:0 8px 30px #ff3d9a35}.btn.outline{background:transparent;border:1px solid #ffffff55;box-shadow:none}
+section{padding:82px 0}.section-tag{color:var(--pink);letter-spacing:3px;font-size:.75rem;font-weight:800;text-transform:uppercase}
+h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:10px 0 18px}.intro{color:var(--muted);max-width:650px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:35px}.card{background:linear-gradient(145deg,#1a1a2a,#10101a);border:1px solid #ffffff13;padding:27px;border-radius:18px;transition:.2s}.card:hover{transform:translateY(-5px);border-color:#ff3d9a77}
+.icon{font-size:2rem}.card h3{margin:12px 0 8px}.card p{color:var(--muted);margin:0}
+.about{background:#10101b}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.visual{min-height:340px;border-radius:22px;background:radial-gradient(circle at 50% 40%,#ff3d9a55,transparent 35%),linear-gradient(135deg,#22203c,#10101a);border:1px solid #ffffff20;display:grid;place-items:center;text-align:center;padding:25px}
+.visual strong{font-size:clamp(2rem,5vw,4rem);line-height:1.05;letter-spacing:3px;text-shadow:0 0 25px #ff3d9a66}.visual small{display:block;color:var(--cyan);letter-spacing:4px;margin-top:12px}
+.stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:28px}.stat strong{display:block;font-size:1.8rem;color:var(--cyan)}.stat span{font-size:.85rem;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:15px;margin-top:30px}.shot{height:220px;border-radius:16px;background:linear-gradient(135deg,#422044,#17172b);display:grid;place-items:center;font-size:3rem;border:1px solid #ffffff18}.shot:nth-child(2){background:linear-gradient(135deg,#123d50,#211a3b)}.shot:nth-child(3){background:linear-gradient(135deg,#4b2637,#19182c)}
+.contact{background:linear-gradient(120deg,#1b1022,#10101b)}.contact-box{display:flex;justify-content:space-between;align-items:center;gap:25px;flex-wrap:wrap}.contact p{color:var(--muted);max-width:550px}
+footer{padding:25px 0;color:#8e8c9d;border-top:1px solid #ffffff15;font-size:.85rem}.footer-row{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+@media(max-width:760px){.links{display:none;position:absolute;top:72px;left:0;right:0;background:#10101b;padding:20px 5%;flex-direction:column;gap:15px}.links.open{display:flex}.menu{display:block}.hero{min-height:570px}.cards{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.shot{height:180px}.hero-inner{padding:75px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="logo" href="#home">DJ <span>OPERATOR</span></a>
+<button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('.links').classList.toggle('open')">Menu</button>
+<div class="links"><a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+</nav></div></header>
+<main>
+<section class="hero" id="home"><div class="wrap"><div class="hero-inner">
+<div class="eyebrow">Sound • Lights • Energy</div>
+<h1>TURN UP<br>THE <span>ENERGY.</span></h1>
+<p>Make every celebration unforgettable with powerful beats, vibrant lights and a DJ experience built around your crowd.</p>
+<div class="actions"><a class="btn" href="#contact">BOOK YOUR EVENT</a><a class="btn outline" href="#services">EXPLORE SERVICES</a></div>
+</div></div></section>
+<section id="services"><div class="wrap">
+<div class="section-tag">What we do</div><h2>THE PARTY STARTS HERE.</h2>
+<p class="intro">From intimate celebrations to high-energy events, get the music, sound and atmosphere that bring people together.</p>
+<div class="cards">
+<article class="card"><div class="icon">🎧</div><h3>DJ Performance</h3><p>Live mixing and crowd-friendly playlists across Tamil hits, chart music, EDM, hip-hop and more.</p></article>
+<article class="card"><div class="icon">🔊</div><h3>Sound Setup</h3><p>Clear, powerful sound for announcements, dance floors and memorable event moments.</p></article>
+<article class="card"><div class="icon">💡</div><h3>Lighting & Effects</h3><p>Dynamic lighting and visual energy to create the right atmosphere for your celebration.</p></article>
+</div></div></section>
+<section class="about" id="about"><div class="wrap about-grid">
+<div><div class="section-tag">About DJ Operator</div><h2>YOUR EVENT.<br>OUR RHYTHM.</h2>
+<p class="intro">DJ Operator brings music and entertainment together to make every occasion feel special. We work with your event style and music preferences, then build a set that keeps the atmosphere alive.</p>
+<div class="stats"><div class="stat"><strong>100%</strong><span>Event energy</span></div><div class="stat"><strong>∞</strong><span>Music possibilities</span></div><div class="stat"><strong>1</strong><span>Unforgettable night</span></div></div>
+</div><div class="visual"><div><strong>FEEL<br>THE BEAT</strong><small>DJ OPERATOR</small></div></div>
+</div></section>
+<section id="gallery"><div class="wrap"><div class="section-tag">The vibe</div><h2>LIGHTS. MUSIC. MEMORIES.</h2><p class="intro">A glimpse of the atmosphere we aim to create at every event.</p>
+<div class="gallery"><div class="shot">🎛️</div><div class="shot">🎚️</div><div class="shot">✨</div></div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap contact-box"><div><div class="section-tag">Let's make it happen</div><h2>READY TO PARTY?</h2><p>Tell us about your event, preferred date and music style. Get in touch to discuss availability and packages.</p></div><a class="btn" href="https://wa.me/910000000000?text=Hi%20DJ%20Operator%2C%20I%20want%20to%20book%20an%20event." target="_blank" rel="noopener">CONTACT ON WHATSAPP</a></div></section>
+</main>
+<footer><div class="wrap footer-row"><span>© 2026 DJ Operator. All rights reserved.</span><span>Made for music lovers.</span></div></footer>
+</body></html>
